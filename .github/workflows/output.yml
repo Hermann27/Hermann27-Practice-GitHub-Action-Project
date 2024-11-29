@@ -1,0 +1,8 @@
+name: Handle issues
+on: issues # this workflow will be manuelly trigger
+jobs:
+  info:
+    runs-on: ubuntu-latest # I am using the latest Ubuntu image that will run the job[runners]
+    steps:
+      - name: Output event details
+        run: echo "${{ toJSON(github.event)}}" # this will return all the contxt infos from my github
